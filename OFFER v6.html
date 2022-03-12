@@ -1,0 +1,74 @@
+<html>
+<body>
+
+<form action="sh.php"method="get">
+
+Our Ref no:     <input type="text"name="ref"><br>
+Date:           <input type="date"name="date" value=""><br>
+M/s:-           <input type="text" name="ms"size="80"><br>
+Location:       <input type="text" name="loca"size="80"><br>
+Mr. / Ms.       <input type="text" name="mrms"size="80"><br>
+Cell No:        <input type="number"name="cell"><br>
+REF: YOUR ENQ/TENDER NO             <input type="text"name="yref"size="80"><br>
+dt:             <input type="date"name="dt"><br>
+disc:             <input type="number"name="disc" value="28"><br>
+PRICES   :        <input type="text"name="price"size="80" value="PRICES ARE FOR OUR BHIWANDI WAREHOUSE. THIS IS NET PRICE OFFERED."><br>
+PAYMENT  : <input type="text"name="pay"size="80" value="20% ADVANCE WITH ORDER,BALANCE////100% AGAINST PRO INV/TRU  HDFC BANK"><br>
+VALIDITY : <input type="text"name="validity"size="50" value="10/30 DAYS THEREAFTER KINDLY CHECK WITH US."><br>
+<!--
+item: <input type="text"name="item"size="50" value="cdg11:">
+item: <input type="text"name="quan"size="50" value="01">
+item: <input type="text"name="pri"size="50" value="cdg11:">
+item: <input type="text"name="deli"size="50" value="4-6 WKS/ EXSTOCK">
+
+
+
+
+    Total item:          <input id="item" type="number" value="03" name="v" onkeyup="number()"><br>
+
+<div id="demo">
+                        <script>
+                            function number()
+                            {
+                                
+                                var y = document.getElementById("item").value;
+                                
+                                for (let j=0;j<y;j++)
+                                {
+                                   
+                                    var inp= document.createElement("input");
+                                    inp.value="";
+                                    inp.name="ite"+j;
+                                    var parent = document.getElementById("demo");
+                                    parent.appendChild(inp);
+
+                                    var inp= document.createElement("input");
+                                    inp.value="";
+                                    inp.name="quan"+j;
+                                    var parent = document.getElementById("demo");
+                                    parent.appendChild(inp);
+
+                                    var inp= document.createElement("input");
+                                    inp.value="";
+                                    inp.name="pri"+j;
+                                    var parent = document.getElementById("demo");
+                                    parent.appendChild(inp);
+
+                                    var inp= document.createElement("input");
+                                    inp.value="";
+                                    inp.name="deli"+j;
+                                    var parent = document.getElementById("demo");
+                                    parent.appendChild(inp);
+
+                                }
+                                
+                            }
+                        </script>
+                        
+</div>
+-->
+<br>
+<input type="submit" >
+</form>
+</body>
+</html>
