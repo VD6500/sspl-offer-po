@@ -40,10 +40,10 @@
             </div>
             <div class="row" style="padding: 10px;border: 2px solid;margin:1px; font-size: 11PX;">
                 <div class="col">
-                    Our Ref no:    <strong style="font-size: 10PX;"> <?php echo $_GET["ref"]; ?></strong><br>
+                    Our Ref no:    <strong style="font-size: 12PX;"> <?php echo $_GET["ref"]; ?></strong><br>
                 </div>
                 <div class="col" style="text-align: right;">
-                    Date:           <strong style="font-size: 10PX;"><?php echo $_GET["date"]; ?></strong><br>
+                    Date:           <strong style="font-size: 12PX;"><?php echo $_GET["date"]; ?></strong><br>
                 </div>
             </div>
             <div  >
@@ -95,16 +95,17 @@
                             var x = document.getElementById("item").value;
                             var sum=0;
                             for (let i = 0; i < x;i++) {
-                                var m=prompt("MODEL","VAJH13");
-                                var q=prompt("QUANTITY","01");
-                                var add=parseInt(prompt("Price","4080"));
-                                var d=prompt("DELIVERY","4-6 WKS/ EXSTOCK");
+                                var m=prompt("MODEL FOR ITEM:"+(i+1),"VAJH13");
+                                var q=prompt("QUANTITY FOR ITEM:"+(i+1),"01");
+                                var add=parseInt(prompt("Price FOR ITEM:"+(i+1),"4080"));
+                                var d=prompt("DELIVERY FOR ITEM:"+(i+1),"6-8 WKS/ EXSTOCK");
                             //text += "<strong>"+(i+1) +" <#?php #echo $_GET[$a+$I]; ?>  </strong> Relay as per below specs.. <strong><#?php #echo //$_GET["quan"]; ?></strong> unit <strong>Price Rs. <#?php #echo $_GET["pri"]; ?>/- <#?php #echo $_GET["deli"]; ?></strong><br>";
-                            sum=(sum+add);
-                            text+="<strong>"+(i+1)+"."+m+"</strong> Relay as per below specs.. <strong>"+q+"</strong> unit <strong>Price Rs. "+ add +"/- "+d+" </strong><br>";
+                            
+                            sum=(sum+(add*q));
+                            text+="<strong>"+(i+1)+"."+m+"</strong> Relay as per below specs.. <strong>"+q+"</strong> qty <strong>Unit Price Rs. "+ add +"/- "+d+" </strong><br>";
                                 
                             }
-                            text+="<strong>TOTAL SUM="+sum+"/-<strong>";
+                            text+="<strong><strong>TOTAL SUM="+sum+"/-</strong></strong>";
                             document.getElementById("demo").innerHTML = text;
                            
                         }
@@ -138,7 +139,9 @@ mysqli_close($conn);
                     DELIVERY : AS ABOVE :-EX-STOCK ITEM ARE SUBJECT TO PRIOR SALES<br>
                     TAX      : GST 18% EXTRA AS APPLICABLE.<br>
                     DISCOUNT : LESS <?php echo $_GET["disc"]; ?>% ON ABOVE PRICES.<br>
-                    INSURENCE: IN YOUR SCOPE ; YOU HAVE TO INSURE THE CONSIGNMENT IF REQUIRED.
+                    PLEASE FEEL FREE TO CONTACT US FOR ANY CLARIFICATION REQUIRED. 
+                    LOOKING FORWARD FOR YOUR VALUED ORDER.
+                    
                 </p>
                 
                 <strong>BEST REGARDS,<br>
@@ -151,8 +154,7 @@ mysqli_close($conn);
                     <br>PAYMENT  : <?php echo $_GET["pay"]; ?><br>
                     VALIDITY : <?php echo $_GET["validity"]; ?><br>
                     HSNCODE  : 85364900<br>
-                    PLEASE FEEL FREE TO CONTACT US FOR ANY CLARIFICATION REQUIRED. 
-                    LOOKING FORWARD FOR YOUR VALUED ORDER.
+                    INSURENCE: IN YOUR SCOPE ; YOU HAVE TO INSURE THE CONSIGNMENT IF REQUIRED.
                 </p> 
             </div>
         </div>
